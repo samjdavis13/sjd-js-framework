@@ -46,20 +46,20 @@ var sjdSmoothScroll = sjdSmoothScroll || {};
 	};
 
 	function init(options) {
+
 		$('a[href*="#"]').unbind('click', scrollHandler);
-		
 	    $('a[href*="#"]').click(scrollHandler);
-		
-		excludedTargets = options && options.exclude ? options.exclude : undefined;
+
+    var	excludedTargets = options && options.exclude ? options.exclude : undefined;
 		if (excludedTargets) {
-			for (var i = excludedTargets.length - 1; i >= 0; i--) {
-				$(excludedTargets[i]).unbind('click', scrollHandler);
-			}
+			excludedTargets.map( target => {
+				$(target).unbind('click', scrollHandler);
+			} );
 		}
 	}
-	
+
 	init();
-	
+
 	context.init = init;
 	context.scrollToElement = publicScrollHandler;
 
