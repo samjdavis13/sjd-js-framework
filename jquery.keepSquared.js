@@ -26,11 +26,9 @@
                 // Check if setting width or height.
                 if ($elementWidth > 0) {
                     $(this).height( $(this).width() * settings.scalingFactor );
-                } else if ($elementHeight > 0) {
-                    $(this).width( $(this).height() * settings.scalingFactor );
                 } else {
-                    // If both width and height == 0; return an error.
-                    return window.console.error("No supplied width or height for an element");
+                    $(this).width( '100%' );
+                    $(this).height( $(this).width() * settings.scalingFactor );
                 }
 
             });

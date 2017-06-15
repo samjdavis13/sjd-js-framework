@@ -35,12 +35,12 @@ var sjdSmoothScroll = sjdSmoothScroll || {};
         return false;
     };
 
-	var publicScrollHandler = function(el, offset = 0) {
+	var publicScrollHandler = function(el, offset = 0, duration = 400) {
 		var $root = $('html, body');
 		$root.animate({
 			scrollTop: $(el).offset().top + offset
 		}, {
-			duration: 400,
+			duration: duration,
 			easing: 'easeInOutQuad'
 		});
 	};
@@ -54,6 +54,9 @@ var sjdSmoothScroll = sjdSmoothScroll || {};
 		if (excludedTargets) {
 			excludedTargets.map( target => {
 				$(target).unbind('click', scrollHandler);
+				$(target).click(function(e) {
+					e.preventDefault();
+				});
 			} );
 		}
 	}
