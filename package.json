@@ -1,0 +1,25 @@
+{
+  "name": "sjd-js",
+  "version": "1.0.0",
+  "description": "Frequently used JS scripts and plugins written by Sam Davis",
+  "main": "jquery.keepSquared.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://treetrum@github.com/treetrum/sjd-js-framework.git"
+  },
+  "keywords": [
+    "js",
+    "plugin",
+    "sam",
+    "davis"
+  ],
+  "author": "Sam Davis <sam@sjd.co>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/treetrum/sjd-js-framework/issues"
+  },
+  "homepage": "https://github.com/treetrum/sjd-js-framework#readme"
+}
