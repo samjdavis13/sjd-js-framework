@@ -1,6 +1,6 @@
 {
   "name": "sjd-js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Frequently used JS scripts and plugins written by Sam Davis",
   "main": "jquery.keepSquared.js",
   "scripts": {
