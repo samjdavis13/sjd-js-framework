@@ -24,7 +24,9 @@ jQuery.extend(jQuery.easing, {
 var sjdSmoothScroll = sjdSmoothScroll || {};
 (function (context) {
 
-	var scrollHandler = function scrollHandler(offset = 0) {
+	var scrollHandler = function scrollHandler() {
+		var offset = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
 		var $root = $('html, body');
 		var href = $(this).attr('href');
 		$root.animate({
@@ -52,13 +54,15 @@ var sjdSmoothScroll = sjdSmoothScroll || {};
 	function init(options) {
 
 		$('a[href*="#"]').unbind('click', scrollHandler);
+		$('a[href*="#"]').click(scrollHandler);
 
-		var offset = options && options.offset ? options.offset : 0
-		$('a[href*="#"]').click(function() {
+		var offset = options && options.offset ? options.offset : 0;
+		$('a[href*="#"]').click(function () {
 			scrollHandler(offset);
 		});
 
 		var excludedTargets = options && options.exclude ? options.exclude : undefined;
+
 		if (excludedTargets) {
 			excludedTargets.map(function (target) {
 				$(target).unbind('click', scrollHandler);
@@ -73,5 +77,4 @@ var sjdSmoothScroll = sjdSmoothScroll || {};
 
 	context.init = init;
 	context.scrollToElement = publicScrollHandler;
-
 })(sjdSmoothScroll);
