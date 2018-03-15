@@ -7,13 +7,19 @@
 		"uuidString": "D286FFFA-F9B7-4454-8B07-79E58409CD9D"
 		}
 	],
-"creatorBuild": "26268",
+"creatorBuild": "26330",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/dist\/.gitignore",
+		"oF": 0
+		},
+	"\/dist": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "\/dist\/dist",
 		"oF": 0
 		},
 	"\/package.json": {
