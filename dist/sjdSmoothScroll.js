@@ -65,14 +65,14 @@ var sjdSmoothScroll = sjdSmoothScroll || {};
 			}, options);
 
 			$('a[href*="#"]').each(function (index, item) {
-				var _this = this;
+				var _this2 = this;
 
 				// Bind this to the scrollhandler
 
 				// Create our wrapper function
 				var scrollHandlerWrapper = function scrollHandlerWrapper(e) {
 					e.preventDefault();
-					scrollHandler = scrollHandler.bind(_this);
+					scrollHandler = scrollHandler.bind(_this2);
 					scrollHandler(settings.offset);
 				};
 
@@ -83,8 +83,8 @@ var sjdSmoothScroll = sjdSmoothScroll || {};
 				$(item).off('click');
 
 				// Work out the flag for this element
-				settings.exclude.forEach(function (excludingElement) {
-					if ($(excludingElement) == $(item)) {
+				settings.exclude.forEach(function (elementToExclude) {
+					if ($.inArray($(_this)[0], $(elementToExclude)) != -1) {
 						shouldBindThisElement = false;
 					}
 				});

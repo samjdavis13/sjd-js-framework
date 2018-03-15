@@ -76,8 +76,8 @@ var sjdSmoothScroll = sjdSmoothScroll || {};
 				$(item).off('click');
 
 				// Work out the flag for this element
-				settings.exclude.forEach(excludingElement => {
-					if ($(excludingElement) == $(item)) {
+				settings.exclude.forEach(elementToExclude => {
+					if ( $.inArray($(_this)[0], $(elementToExclude)) != -1 ) {
 						shouldBindThisElement = false;
 					}
 				});
