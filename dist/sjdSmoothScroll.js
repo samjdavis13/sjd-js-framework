@@ -65,14 +65,14 @@ var sjdSmoothScroll = sjdSmoothScroll || {};
 			}, options);
 
 			$('a[href*="#"]').each(function (index, item) {
-				var _this2 = this;
+				var _this = this;
 
 				// Bind this to the scrollhandler
 
 				// Create our wrapper function
 				var scrollHandlerWrapper = function scrollHandlerWrapper(e) {
 					e.preventDefault();
-					scrollHandler = scrollHandler.bind(_this2);
+					scrollHandler = scrollHandler.bind(_this);
 					scrollHandler(settings.offset);
 				};
 
