@@ -33,7 +33,7 @@
 	"\/src\/jquery.keepSquared.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 0,
+		"mi": 1,
 		"oA": 0,
 		"oAP": "\/dist\/jquery.keepSquared.js",
 		"oF": 2,
@@ -43,7 +43,7 @@
 	"\/src\/sjdSmoothScroll.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 0,
+		"mi": 1,
 		"oA": 0,
 		"oAP": "\/dist\/sjdSmoothScroll.js",
 		"oF": 2,
